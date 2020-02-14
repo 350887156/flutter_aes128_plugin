@@ -7,7 +7,7 @@
 //
 
 
-#import "GTMBase64.h"
+#import <GTMBase64/GTMBase64.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
