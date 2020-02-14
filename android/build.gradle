@@ -1,0 +1,40 @@
+group 'com.ch.flutter_aes128_plugin'
+version '1.0'
+
+buildscript {
+    repositories {
+        google()
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.5.0'
+    }
+}
+
+rootProject.allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 28
+
+    defaultConfig {
+        minSdkVersion 16
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    lintOptions {
+        disable 'InvalidPackage'
+    }
+}
+dependencies {
+    implementation files('libs/bcprov-jdk16-1.45.jar')
+    implementation files('libs/commons-codec-1.1.jar')
+    implementation 'androidx.legacy:legacy-support-v13:1.0.0'
+    implementation 'androidx.annotation:annotation:1.0.0'
+}
